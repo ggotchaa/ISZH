@@ -1,0 +1,21 @@
+<div>
+  <div class="row">
+    <div class="column" style="width: 15%"></div>
+    <div class="column" style="width: -webkit-fill-available">
+      <div class="tab">
+        <button class="tablinks" [routerLink]="['administration']">
+          Администрирование
+        </button>
+        <button class="tablinks">Учет животных</button>
+        <button class="tablinks">Отчеты</button>
+        <button class="tablinks">Ветеринарная лаборатория</button>
+        <button class="tablinks">Справочники</button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+  <footer></footer>
+</div>
