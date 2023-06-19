@@ -1,21 +1,46 @@
-<div>
-  <div class="row">
-    <div class="column" style="width: 15%"></div>
-    <div class="column" style="width: -webkit-fill-available">
-      <div class="tab">
-        <button class="tablinks" [routerLink]="['administration']">
-          Администрирование
-        </button>
-        <button class="tablinks">Учет животных</button>
-        <button class="tablinks">Отчеты</button>
-        <button class="tablinks">Ветеринарная лаборатория</button>
-        <button class="tablinks">Справочники</button>
+<nz-layout>
+  <ng-container *ngIf="showCards">
+  <div style="padding:30px;">
+    <div nz-row>
+      <div nz-col [nzSpan]="8">
+        <nz-card class="custom-card" style="color: #77C48D; height: 100%;">
+          <p>Учёт животных</p>
+          <a style="color: #77C48D" [routerLink]="['/animal-accounting']">Перейти</a>
+        </nz-card>
+      </div>
+      <div nz-col [nzSpan]="8">
+        <nz-card class="custom-card" style="color: #77C48D; height: 100%;">
+          <p>Отчёты</p>
+          <a style="color: #77C48D" [routerLink]="['/reports']">Перейти</a>
+        </nz-card>
+      </div>
+      <div nz-col [nzSpan]="8">
+        <nz-card class="custom-card" style="color: #77C48D; height: 100%;">
+          <p>Ветиринарная лаборатория</p>
+          <a style="color: #77C48D" [routerLink]="['/veterinary-lab']">Перейти</a>
+        </nz-card>
+      </div>
+    </div>
+    <div nz-row>
+      <div nz-col [nzSpan]="8">
+        <nz-card class="custom-card" style="color: #77C48D; height: 100%;">
+          <p>Справочники</p>
+          <a style="color: #77C48D" [routerLink]="['/directories']">Перейти</a>
+        </nz-card>
+      </div>
+      <div nz-col [nzSpan]="16">
+        <nz-card class="custom-card" style="color: #77C48D; height: 100%;">
+          <p>Администрирование</p>
+          <a style="color: #77C48D" [routerLink]="['administration']">Перейти</a>
+        </nz-card>
       </div>
     </div>
   </div>
+</ng-container>
+  
 
   <main>
     <router-outlet></router-outlet>
   </main>
   <footer></footer>
-</div>
+</nz-layout>

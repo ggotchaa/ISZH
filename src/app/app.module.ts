@@ -12,9 +12,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { PortalModule } from './portal/portal.module';
 import { PortalRoutingModule } from './portal/portal-routing.module';
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { NzTabsModule } from 'ng-zorro-antd/tabs';
+import { NzGridModule} from 'ng-zorro-antd/grid';
+import { NZ_I18N } from 'ng-zorro-antd/i18n';
+import { en_US } from 'ng-zorro-antd/i18n';
+import { NzCardModule } from 'ng-zorro-antd/card';
 
 registerLocaleData(en);
-
 
 @NgModule({
   declarations: [
@@ -31,7 +36,12 @@ registerLocaleData(en);
     PortalModule, 
     PortalRoutingModule,
     CommonModule,
+    NzLayoutModule, 
+    NzTabsModule, 
+    NzGridModule,
+    NzCardModule
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [{ provide: NZ_I18N, useValue: en_US }]
 })
 export class AppModule { }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedService } from 'src/app/shared/shared.service';
 
 @Component({
   selector: 'app-administration',
@@ -6,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./administration.component.scss']
 })
 export class AdministrationComponent implements OnInit {
+  constructor(private sharedService: SharedService) {}
   selectedMenuItem: string = '';
+  
 
   ngOnInit(): void {
+    this.sharedService.updateShowCards(false);
   }
 
   openContent(menuItem: string) {

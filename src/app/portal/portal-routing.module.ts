@@ -10,16 +10,14 @@ const routes: Routes = [
     component: PortalComponent,
     children: [
       {
-        path: 'administration',
-        component: AdministrationComponent,
-        
+        path: 'administration', component: AdministrationComponent, data: { showCards: false }       
       },
     ],
   },
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes),
+  imports: [RouterModule.forRoot(routes),
     HttpClientModule
   ],
   exports: [RouterModule],
