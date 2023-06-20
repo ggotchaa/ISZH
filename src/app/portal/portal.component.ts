@@ -1,6 +1,6 @@
 import { Component, ElementRef, Renderer2, OnInit, ChangeDetectorRef } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SharedService } from '../shared/shared.service';
+import { SharedService } from '../shared/services/shared.service';
 
 @Component({
   selector: 'app-portal',
@@ -8,14 +8,15 @@ import { SharedService } from '../shared/shared.service';
   styleUrls: ['./portal.component.scss']
 })
 export class PortalComponent implements OnInit {
+  constructor(private sharedService: SharedService, private cdr: ChangeDetectorRef) {}
+  
   showCards: boolean = true;
 
-  constructor(private sharedService: SharedService, private cdr: ChangeDetectorRef) {}
-
-
-  gridStyle = {
-    width: '100%',
-    textAlign: 'center'
+  cardStyle = {
+    width: "100%",
+    textAlign: "left",
+    color: "#77C48D",
+    height: "100%",
   };
 
   ngOnInit(): void {

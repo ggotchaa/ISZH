@@ -1,13 +1,13 @@
-.ant-layout {
+.container{
+  padding: 30px;
+}
+.header-menu{
   display: flex;
-  flex: auto;
-  flex-direction: column;
-  min-height: 0;
-  background: white !important;
+  padding: 30px;
 }
 
 p {
-  font-family: 'Inter' sans-serif;
+  font-family: "Inter" sans-serif !important;
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
@@ -34,13 +34,11 @@ p {
   height: 100% !important;
 }
 .ant-col-8 :hover {
-  background: linear-gradient(0deg, #E9FFEF, #E9FFEF), #FFFFFF;
-border: 1px solid rgba(59, 71, 103, 0.08);
-border-radius: 4px;
+  background: linear-gradient(0deg, #e9ffef, #e9ffef), #ffffff;
+  border-radius: 4px;
 }
 
 .ant-col-16 :hover {
-  background: linear-gradient(0deg, #E9FFEF, #E9FFEF), #FFFFFF;
-border: 1px solid rgba(59, 71, 103, 0.08);
-border-radius: 4px;
+  background: linear-gradient(0deg, #e9ffef, #e9ffef), #ffffff;
+  border-radius: 4px;
 }
