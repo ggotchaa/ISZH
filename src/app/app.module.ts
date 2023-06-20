@@ -19,6 +19,7 @@ import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { en_US } from 'ng-zorro-antd/i18n';
 import { NzCardModule } from 'ng-zorro-antd/card';
 
+
 registerLocaleData(en);
 
 @NgModule({
@@ -42,6 +43,6 @@ registerLocaleData(en);
     NzCardModule
   ],
   bootstrap: [AppComponent],
-  providers: [{ provide: NZ_I18N, useValue: en_US }]
+  providers: [{ provide: NZ_I18N, useValue: en_US }],
 })
 export class AppModule { }

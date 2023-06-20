@@ -4,32 +4,32 @@
       <div class="column">
         <div id="portalAdministration" class="tabcontent">
           <div class="sidebar">
-            <a (click)="openContent('1')">Пользователи</a>
-            <a (click)="openContent('Организации')">Организации</a>
-            <a (click)="openContent('3')">Роли и Доступы</a>
-            <a (click)="openContent('4')">Договора</a>
+            <a (click)="openContent('users')">Пользователи</a>
+            <a (click)="openContent('organizations')">Организации</a>
+            <a (click)="openContent('rolesandpermissions')">Роли и Доступы</a>
+            <a (click)="openContent('contracts')">Договора</a>
           </div>
         </div>
       </div>
       <div class="column">
         <div class="content">
           <!-- Render specific content based on the selectedMenuItem -->
-          <div *ngIf="selectedMenuItem === '1'">
-            <!-- Content for menu item 1 -->
-            <h2>Menu Item 1 Content</h2>
-            <p>This is the content for menu item 1.</p>
+          <div *ngIf="selectedMenuItem === 'users'">
+            <!-- Content for menu item users -->
+            <h2>Menu Item users Content</h2>
+            <p>This is the content for menu item users.</p>
           </div>
-          <div *ngIf="selectedMenuItem === 'Организации'">
-            <!-- Content for menu item Организации -->
-            <h2>Организации Content</h2>
-            <p>This is the content for menu item Организации.</p>
+          <div *ngIf="selectedMenuItem === 'organizations'">
+            <!-- Content for menu item organizations -->
+            <h2>organizations Content</h2>
+            <p>This is the content for menu item organizations.</p>
           </div>
-          <div *ngIf="selectedMenuItem === '3'">
+          <div *ngIf="selectedMenuItem === 'rolesandpermissions'">
             <!-- Content for menu item 3 -->
             <h2>Menu Item 3 Content</h2>
             <p>This is the content for menu item 3.</p>
           </div>
-          <div *ngIf="selectedMenuItem === '4'">
+          <div *ngIf="selectedMenuItem === 'contracts'">
             <!-- Content for menu item 4 -->
             <h2>Menu Item 4 Content</h2>
             <p>This is the content for menu item 4.</p>
